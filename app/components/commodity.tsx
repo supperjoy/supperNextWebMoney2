@@ -26,7 +26,7 @@ export function Commodity() {
   const getCommodity = () => {
     axios({
       method: "get",
-      url: "https://demo.supperjoy.online/commodity",
+      url: "https://test.supperjoy.cn/commodity",
       withCredentials: true,
     }).then((res) => {
       setProducts(res.data.data);

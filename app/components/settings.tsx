@@ -291,7 +291,7 @@ export function Settings() {
 
     axios({
       method: "get",
-      url: "https://demo.supperjoy.online/user/checklogin",
+      url: "https://test.supperjoy.cn/user/checklogin",
       withCredentials: true,
     }).then((res) => {
       console.log(res);
@@ -323,7 +323,7 @@ export function Settings() {
   const getExpire = () => {
     axios({
       method: "get",
-      url: "https://demo.supperjoy.online/user/getexpire",
+      url: "https://test.supperjoy.cn/user/getexpire",
       withCredentials: true,
     }).then((res) => {
       setExpire(res.data.data);
@@ -333,7 +333,7 @@ export function Settings() {
   const getCurrentNumber = () => {
     axios({
       method: "get",
-      url: "https://demo.supperjoy.online/user/getCurrentNumber",
+      url: "https://test.supperjoy.cn/user/getCurrentNumber",
       withCredentials: true,
     }).then((res) => {
       setCurrentTime(res.data.data);
@@ -344,7 +344,7 @@ export function Settings() {
     if (localStorage.getItem("userInfo")) {
       axios({
         method: "get",
-        url: "https://demo.supperjoy.online/common/logout",
+        url: "https://test.supperjoy.cn/common/logout",
         withCredentials: true,
       }).then((res) => {
         if (res.data.code === 200) {
@@ -361,7 +361,7 @@ export function Settings() {
     if (event.key === "Enter") {
       axios({
         method: "post",
-        url: "https://demo.supperjoy.online/redemption/getRedem",
+        url: "https://test.supperjoy.cn/redemption/getRedem",
         data: {
           code,
           username: JSON.parse(localStorage.getItem("userInfo")!).username,
@@ -386,7 +386,7 @@ export function Settings() {
     if (event.target.value.length == 16) {
       axios({
         method: "post",
-        url: "https://demo.supperjoy.online/redemption/getRedem",
+        url: "https://test.supperjoy.cn/redemption/getRedem",
         data: {
           code:event.target.value,
           username: JSON.parse(localStorage.getItem("userInfo")!).username,

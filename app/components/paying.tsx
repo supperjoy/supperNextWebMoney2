@@ -30,7 +30,7 @@ export function Paying() {
   const paying = () => {
     axios({
       method: "get",
-      url: "https://demo.supperjoy.online/user/getCode",
+      url: "https://test.supperjoy.cn/user/getCode",
       withCredentials: true,
       params: {
         commodityId,
@@ -52,7 +52,7 @@ export function Paying() {
         };
         axios({
           method: "post",
-          url: "https://demo.supperjoy.online/order/query",
+          url: "https://test.supperjoy.cn/order/query",
           data,
           withCredentials: true,
         }).then(() => {

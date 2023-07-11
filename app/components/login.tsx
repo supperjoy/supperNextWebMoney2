@@ -24,7 +24,7 @@ export function Login() {
   }, []);
 
   function getCode() {
-    axios.get("https://demo.supperjoy.online/common/captcha").then((res) => {
+    axios.get("https://test.supperjoy.cn/common/captcha").then((res) => {
       console.log(res.data.data);
       loginInfo.key = res.data.data.key;
       setImage(res.data.data.image);
@@ -35,7 +35,7 @@ export function Login() {
     console.log(loginInfo);
     await axios({
       method: "post",
-      url: "https://demo.supperjoy.online/common/login",
+      url: "https://test.supperjoy.cn/common/login",
       data: loginInfo,
       withCredentials: true,
     }).then((res) => {
@@ -112,7 +112,7 @@ export function Login() {
             className="footer"
             style={{ fontSize: "12px", marginTop: "20px" }}
           >
-            搭建同款网站，躺着赚，请联系客服
+            搭建同款网站，请联系管理员
           </div>
         </div>
       </div>

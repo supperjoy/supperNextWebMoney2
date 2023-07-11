@@ -35,7 +35,7 @@ export function Register() {
     console.log(registerInfo);
     axios({
       method: "post",
-      url: "https://demo.supperjoy.online/common/register",
+      url: "https://test.supperjoy.cn/common/register",
       data: registerInfo,
       withCredentials: true,
     }).then((res) => {
@@ -54,7 +54,7 @@ export function Register() {
   }, []);
 
   function getCode() {
-    axios.get("https://demo.supperjoy.online/common/captcha").then((res) => {
+    axios.get("https://test.supperjoy.cn/common/captcha").then((res) => {
       registerInfo.key = res.data.data.key;
       setImage(res.data.data.image);
     });
